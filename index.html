@@ -9,7 +9,8 @@
 
     <link rel="stylesheet" href="./css/styles.css">
     <title>Experts Live Radio - Luister Live</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/castjs/5.3.0/cast.min.js"></script>
     
 
 </head>
@@ -19,25 +20,42 @@
             <img src="./img/logo.png" alt="Experts Live Radio Logo">
         </div>
         <div class="player">
-            <video id="hlsPlayer" controls></video>
+            <video id="hlsPlayer" controls x-webkit-airplay="allow"></video>
             <button id="playPauseButton">Play</button>
-            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+            <button id="watchLiveButton">Kijk Live</button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" title="Volume Control">
         </div>        
         <div class="metadataArtist" id="metadataArtist"></div>
         <div class="metadataTitle" id="metadataTitle"></div>
+
+        <div class="airplay">
+            <center><input type="image" src="./img/airplay_icon.png" id="airplay" alt="Airplay Button" />
+
+            <input type="image" id="cast" src="./img/chromecast_icon.png" alt="Chromecast Button" /></center>
+           
+        </div>
         
         <div class="whatsapp">
-            <a href="https://wa.me/31853450999" class="whatsapp-button">
+            <a href="https://wa.me/31853450999" class="whatsapp-button" target="_blank">
                 Stuur een bericht naar de studio
             </a>
         </div>
         <div class="footer">
-            Meer info: <a href="https://expertslive.nl/" target="_blank">Experts Live Nederland</a>
+            Meer info: <a href="https://expertslive.nl/Radio" target="_blank">Experts Live Radio</a>
         </div>
     </div>
     
     <script src="./scripts/metadata.js"></script>    
     <script src="./scripts/player.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXNK0G4MBK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RXNK0G4MBK');
+</script>
 
 </body>
 </html>
