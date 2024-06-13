@@ -49,15 +49,15 @@ function updateArtwork(artist, title) {
         artworkUrl = artworkUrl.replace(/(.*)(-)([0-9]+)(x)([0-9]+)(.*)/, '$1300x300$6');
         artworkImage.src = artworkUrl;
         // Set the width and height attributes to ensure the image is displayed as 300x300 pixels
-        artworkImage.width = 300;
-        artworkImage.height = 300;
+        artworkImage.width = 150;
+        artworkImage.height = 150;
     })
     .catch(error => {
         console.error('Error fetching artwork:', error);
         artworkImage.src = './img/placeholder.png';
         // Set the width and height attributes for the placeholder image as well
-        artworkImage.width = 300;
-        artworkImage.height = 300;
+        artworkImage.width = 150;
+        artworkImage.height = 150;
     });
 }
 
