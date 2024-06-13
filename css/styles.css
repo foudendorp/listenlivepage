@@ -167,6 +167,8 @@ button#watchLiveButton:hover {
 }
 
 .artwork {
-    flex: 1; /* Adjusts the width of the artwork column */
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    /* Other styles as needed */
 }
-
