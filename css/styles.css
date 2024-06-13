@@ -39,6 +39,8 @@ a {
     margin: 20px auto; 
     padding: 10px;        
     text-align: center;
+    flex: 1; /* Adjusts the width of the metadata column */
+    padding-right: 20px; /* Adds some space between the columns */
     
 }
 .metadataArtist
@@ -124,15 +126,55 @@ button#watchLiveButton:hover {
 .whatsapp-button:hover {
     transform: scale(1.05); /* Increase the size by 5% */
 }
+
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 120px;
     background-color: #048cd4;
     color: white;
-    text-align: center;    
-    vertical-align: middle;
-    line-height: 80px; 
-    }
+    display: flex;
+    padding: 0 10px;
+    line-height: 120px;
+    font-family: Arial, sans-serif;
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+.left-footer, .right-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Each footer section takes up half of the footer */
+}
+
+#ExpertsLiveNL {
+    /* Additional styling for #ExpertsLiveNL if needed */
+}
+
+.whatsapp-container {
+    display: flex;
+    align-items: center;
+    /* Additional styling for whatsapp-container if needed */
+}
+
+
+.whatsapp-container img {
+    height: 22px;
+    width: 22px;
+    margin-right: 10px; /* Space between the image and the number */
+}
+
+.whatsapp-container span {
+    align-self: center; /* Aligns this element vertically */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artwork {
+    flex: 1; /* Adjusts the width of the artwork column */
+}

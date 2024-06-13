@@ -11,7 +11,7 @@
     <title>Experts Live Radio - Luister Live</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/castjs/5.3.0/cast.min.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -25,8 +25,18 @@
             <button id="watchLiveButton">Kijk Live</button>
             <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" title="Volume Control">
         </div>        
-        <div class="metadataArtist" id="metadataArtist"></div>
-        <div class="metadataTitle" id="metadataTitle"></div>
+        <!-- <div class="metadataArtist" id="metadataArtist"></div>  -->
+        <!-- <div class="metadataTitle" id="metadataTitle"></div>   -->
+
+        <div class="content">
+            <div class="metadata">
+                <div class="metadataArtist" id="metadataArtist"></div>
+                <div class="metadataTitle" id="metadataTitle"></div>
+            </div>
+            <div class="artwork">
+                <img id="npimage" src="./img/placeholder.png" alt="Now Playing Artwork">
+            </div>
+        </div>        
 
         <div class="airplay">
             <center><input type="image" src="./img/airplay_icon.png" id="airplay" alt="Airplay Button" />
